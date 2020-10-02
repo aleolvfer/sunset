@@ -3,19 +3,21 @@ function _handleErrors(res){
     return res;
 }
 
+const fetchEndereco = async endereco => {
+    const response = await fetch(`https://nominatim.openstreetmap.org/search/?q=${endereco}&format=json`);
+    return response.json(); 
+}
+
+const objEndereco = async () => {
+    const endereco = document.querySelector('#endereco').value;
+    const objetoComDadosDoEndereco = await fetchEndereco(endereco);
+    console.log(objetoComDadosDoEndereco);
+}
+
 document.querySelector('#search').addEventListener("click", function(event){
     event.preventDefault();
-    
-    const endereco = document.querySelector('#endereco').value;
-
-    const url = `https://nominatim.openstreetmap.org/search/?q=${endereco}&format=json`;
-
-    return fetch(url)
-    .then( res => _handleErrors(res))
-    .then( res => res.json())
-    .then( json => json);
+    objEndereco();
 });
-
 
 
 
