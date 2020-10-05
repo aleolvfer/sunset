@@ -1,15 +1,10 @@
-# Sunrise Sunset
+# Sunrise Sunset Front-End
 
-## This project was created as a portifolio to show some of my knowledge in web development. This project makes use of two Apis to obtain location data and search schedules
+Projeto criado para mostrar alguns dos meus conhecimentos em desenvolvimento web. 
 
-
-### Features
-
-- [x] Shows the sunrise time
-- [x] Shows the sunrset time
-- [x] Shows the day length
-- [x] Shows the first light of day
-- [x] Shows the last light of day
+O projeto faz o uso das seguintes APIs:
+- https://nominatim.openstreetmap.org/ para obter a latitude e longitude do local da busca.
+- https://sunrise-sunset.org/api para obter os horários do nascer e do por do sol.
 
 
 <h4 align="center"> 

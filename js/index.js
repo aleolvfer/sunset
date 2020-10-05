@@ -22,7 +22,7 @@ const formatedTime = time => {
     const us = document.querySelector('#busca-estado').value;
     let x;
     for(x in timezone){
-        if(us.toUpperCase() == x){
+        if(us.toUpperCase() === x){
         let arrayTime = time.split("");
         arrayTime[0] = (parseInt(arrayTime[0]) - timezone[x]).toString();
         time = arrayTime.join('');
@@ -39,11 +39,25 @@ const sunriseSunsetTime = (responseSunriseSunset) => {
         firstLight : formatedTime(responseSunriseSunset.results.civil_twilight_begin),
         lastLight : formatedTime(responseSunriseSunset.results.civil_twilight_end)
     }
-    // return sunriseSunsetTime;
-    console.log(sunriseSunsetTime)
+    return sunriseSunsetTime;
+    // console.log(sunriseSunsetTime)
+}
+
+const liCreate = object => {
+    const li = document.createElement("li");
+    li.textContent = object;
+    return li;
 }
 
 document.querySelector('#search').addEventListener("click", async function(event){
     event.preventDefault();
-    sunriseSunsetTime(await fetchSunriseSunsetTime(await objEndereco(), '2020-10-03'))
+    const sunriseSunsetTimeObject = sunriseSunsetTime(await fetchSunriseSunsetTime(await objEndereco(), '2020-10-03'))
+
+    const arrayData = Object.entries(sunriseSunsetTimeObject);
+    for(var [key, value] of arrayData){
+        let li = key + " " + value;
+        document.querySelector('#dados').appendChild(liCreate(li));
+    }
+
 });
+
