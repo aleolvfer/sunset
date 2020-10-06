@@ -1,0 +1,17 @@
+body{
+    color: white;
+    margin: 0;
+    background: url(../img/solMenor.jpeg)fixed;
+    width: 100vw;
+    height: auto;
+}
+
+.img-parallax {
+    position: fixed;
+    width: 100%;
+    height: 3000px;
+}
+
+#layer {
+    background: url(../img/sombra.png) no-repeat 0px 10px;
+}
