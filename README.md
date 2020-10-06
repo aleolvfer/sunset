@@ -10,6 +10,8 @@ O projeto faz o uso das seguintes APIs:
 - https://sunrise-sunset.org/api para obter os horários do nascer e do por do sol.
 
 
+<hr>
+
 <!--ts-->
   Faça um teste na versao [Beta](https://aleolvfer.github.io/sunrise-sunset/)
 <!--te-->
