@@ -10,29 +10,67 @@
 </head>
 <body>
 
-    <div id="layer" class="img-parallax"></div>
 
-    <div class="busca-por-titulo">
+    <header>
+        <nav>
+            <div class="container">
+                <h3 class="logo">ale<span>olvfer</span></h3>
+                <div class="hamburger-menu">
+                    <div class="bar"></div>
+                </div>
+            </div>
+        </nav>
 
-        <div class="headerBusca">
-            <h2>Digite o endereço</h2>
+        <h1 class="big-title">Afim</span> de<br><span> Curtir </span>o <br><span>Por do Sol</span>?</h1>
 
-        <input type="text" name="busca" id="busca-endereco" placeholder="Ex: Av Paulista">
-        <input type="text" name="busca" id="busca-estado" placeholder="Ex: sp">
+        <img src="img/solMenor1.jpeg" alt="Banner por do sol" class="sky">
+        <img src="img/sombra.png" alt="Banner por do sol" class="shadow">
+    </header>
 
-            <button id="search" class="botao-adiciona botao-verde">
-                 Search
-            </button>
-        </div>
+    <section>
+        <div class="container">
+            <div class="content">
+                <h3 class="title">Sobre</h3>
+                <p class="text">
+                    Pôr do sol é o momento em que o Sol se oculta no horizonte na direção oeste,
+                    sendo o início da noite. Pode ser considerado como um processo inverso do nascer do Sol, 
+                    que é quando o sol aparece no horizonte na direção leste, iniciando o dia.
+                    A duração do pôr do sol varia com relação ao período do ano e com a latitude da região
+                    na qual o evento esta sendo observado. Mudanças na duração são geralmente ocasionadas 
+                    pela inclinação e pelo movimento do planeta em sua órbita. 
+                </p>
+            </div>
 
-        <ul id="dados">
+            <div class="resContainer">
+                <form class="buscar">
+
+                    <div class="headerBusca">
+                        <h2>Digite o endereço</h2>
+                        
+                        <input type="text" name="busca" id="busca-endereco" placeholder="Ex: Av Paulista">
+                        <input type="text" name="busca" id="busca-estado" placeholder="Ex: sp">
             
-        </ul>
-        
+                        <button id="search" class="botao-adiciona botao-verde">
+                             Search
+                        </button>
+                    </div>
+                </form>
 
-        
+                <br><br>
 
-    </div>
+                <p class="text">
+
+                    <ul id="dados">
+                            
+                    </ul>
+                    <br>
+                   
+                </p>
+            </div>
+
+        </div>
+    </section>
+
     
     <script src="js/index.js"></script>
 </body>
