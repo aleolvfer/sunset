@@ -117,12 +117,12 @@ h1 span {
 .big-title {
     position: absolute;
     z-index: 30;
-    line-height: 3.5rem;
+    line-height: 4.5rem;
     top: calc(50% - 7rem);
     width: 100%;
     text-align: left;
     padding: 0rem 5rem;
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 150;
     color: white;
 }
