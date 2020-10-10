@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
+
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +8,8 @@
 }
 
 body{
-    font-family: Montserrat;
-    
+    /* font-family: Montserrat;  essa sera a fonte do logo */
+    font-family: 'Montserrat';
 }
 
 .container {
@@ -39,7 +40,7 @@ header:after{
     position: absolute;
     width: 100%;
     z-index: 20;
-    top: 440px;
+    top: 500px;
 }
 
 .sky {
@@ -65,7 +66,7 @@ nav .container {
 
 .logo {
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2px;
@@ -75,8 +76,11 @@ nav .container {
     font-weight: 200;
 }
 
-h1 span {
-    font-weight: 300;
+span {
+    font-weight: 400;
+    /* background: -webkit-linear-gradient(black, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 .hamburger-menu {
@@ -117,14 +121,29 @@ h1 span {
 .big-title {
     position: absolute;
     z-index: 30;
-    line-height: 4.5rem;
-    top: calc(50% - 7rem);
+    line-height:6rem;
+    top: calc(50% + 2rem);
+    width: 100%;
+    text-align: left;
+    padding: 0rem 12rem;
+    font-size: 6rem;
+    font-weight: 200;
+    color: white;
+    opacity: 80%;
+}
+
+header p {
+    position: absolute;
+    z-index: 30;
+    line-height:2rem;
+    top: calc(50% + 5rem);
     width: 100%;
     text-align: left;
     padding: 0rem 5rem;
-    font-size: 5rem;
-    font-weight: 150;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: white;
+    opacity: 50%;
 }
 
 section {
@@ -138,11 +157,12 @@ section .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    min-height: 100hv;
+    min-height: 100vh;
 }
 
 section .resContainer {
     color: white;
+    opacity: 20%;
 }
 
 section .container > *{
