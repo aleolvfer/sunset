@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -8,7 +11,6 @@
 }
 
 body{
-    /* font-family: Montserrat;  essa sera a fonte do logo */
     font-family: 'Montserrat';
 }
 
@@ -38,14 +40,14 @@ header:after{
 
 .shadow {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     z-index: 20;
-    top: 500px;
+    top: 350px;
 }
 
 .sky {
     position: absolute;
-    width: 100%;
+    width: 100vw;
 }
 
 nav {
@@ -66,7 +68,7 @@ nav .container {
 
 .logo {
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2px;
@@ -76,11 +78,9 @@ nav .container {
     font-weight: 200;
 }
 
-span {
+.big-title span {
     font-weight: 400;
-    /* background: -webkit-linear-gradient(black, orange);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+    font-size: 6rem;
 }
 
 .hamburger-menu {
@@ -121,13 +121,14 @@ span {
 .big-title {
     position: absolute;
     z-index: 30;
-    line-height:6rem;
-    top: calc(50% + 2rem);
+    line-height:5rem;
+    top: calc(50% - 9rem);
+    left: calc(50% - 30rem);
     width: 100%;
     text-align: left;
-    padding: 0rem 12rem;
-    font-size: 6rem;
-    font-weight: 200;
+    padding: 2rem 2rem;
+    font-size: 4rem;
+    font-weight: 300;
     color: white;
     opacity: 80%;
 }
@@ -135,48 +136,109 @@ span {
 header p {
     position: absolute;
     z-index: 30;
-    line-height:2rem;
-    top: calc(50% + 5rem);
+    top: calc(50% - 2rem);
+    left: calc(50% - 43.7rem);
     width: 100%;
-    text-align: left;
-    padding: 0rem 5rem;
-    font-size: 1.5rem;
-    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
     color: white;
-    opacity: 50%;
+    opacity: 80%;
 }
+
+header a{
+    position: absolute;
+    z-index: 30;
+    top: calc(50% + 16rem);
+    left: calc(50% + 0.2rem);
+    width: 2%;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    background: linear-gradient(red,#6b122c);
+    border: 2px solid white  ;
+    border-radius: 18px;
+    color: white;
+}
+
 
 section {
     width: 100%;
-    /* height: 800px; nao tem no horiginal */
+    height: 450px; 
     background-color: black;
+    position: relative;
 }
 
 section .container {
-    padding: 3rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    min-height: 100vh;
+    /* grid-template-columns: repeat(3, 2fr); */
+    grid-template-areas: 'myArea myArea';
+    height: 450px;
 }
 
-section .resContainer {
+section .contentPor{
     color: white;
     opacity: 20%;
 }
 
 section .container > *{
-    margin: 2rem;
+    margin: 1rem;
 }
 
-.content {
+.contentBusca {
     color: white;
+    grid-area: myArea;
+    text-align: center;
+    z-index: 30;
 }
 
-.title {
-    font-weight: 400;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: .5rem;
-    position: relative;
+.contentBusca h2 {
+    font-weight: 300;
+}
+
+#busca-endereco, #busca-estado {
+    color: #e73f35;
+    width: 45%;
+    height: 2rem;
+    outline: 0;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+#busca-endereco:focus {
+    outline: 0;
+}
+
+#busca-estado {
+    width: 20%;
+}
+
+#search {
+    background-image: linear-gradient(#a01f56, #e73f35);
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 0.3rem;
+}
+
+#search img {
+    width: 24%;
+}
+
+.shadowBlack{
+    position: absolute;
+    bottom: 450px;
+    height: 100px;
+    width: 100%;
+    z-index: 20;
+    background: linear-gradient(to top, black, black, transparent);
+}
+
+@media (max-width: 420px) {
+    .shadow {
+        top: 95px;
+    }
 }

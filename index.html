@@ -13,60 +13,67 @@
 
     <header>
         <nav>
-            <div class="container">
+            <div class="container translate" data-speed="1.0">
                 <h3 class="logo">ale<span>olvfer</span></h3>
                 <div class="hamburger-menu">
                     <div class="bar"></div>
                 </div>
             </div>
         </nav>
-        
-        <h1 class="big-title"> Afim de  Curtir <br> 
-            &nbsp;&nbsp;&nbsp;&nbsp; o <span> Por do Sol&nbsp;&nbsp;</span>?</h1>
-        <!-- <p>
-            Consulte o horário do Por do Sol, Nascer do Sol<br>Duração do dia,
-            ultima e primeira luz do dia.
-        </p> -->
-
-        <img src="img/solMenor.jpeg" alt="Banner por do sol" class="sky">
-        <img src="img/sombra.png" alt="Banner por do sol" class="shadow">
+    
+        <h1 class="big-title translate" data-speed="0.5"> 
+            SUNSET AND SUNRISE TIME 
+        </h1>
+        <p class="description translate" data-speed="0.5">
+            Consulte o horário do nascer do sol, por do sol, crepuscúslo e duração do dia
+            de qualquer lugar do Brasil.
+        </p>
+   
+        <a href="#search">↓</a>       
+    
+        <img src="img/solMenor.jpeg" alt="Banner por do sol" class="sky translate" data-speed="0.7">
+        <img src="img/sombra.png" alt="Banner por do sol" class="shadow translate" data-speed="0.25">
     </header>
-
+    
     <section>
-        <div class="container">
-            <div class="content">
-                <h2>Digite o endereço</h2>
-                <p class="text">
-                    <!-- Pôr do sol é o momento em que o Sol se oculta no horizonte na direção oeste,
-                    sendo o início da noite. Pode ser considerado como um processo inverso do nascer do Sol, 
-                    que é quando o sol aparece no horizonte na direção leste, iniciando o dia.
-                    A duração do pôr do sol varia com relação ao período do ano e com a latitude da região
-                    na qual o evento esta sendo observado. Mudanças na duração são geralmente ocasionadas 
-                    pela inclinação e pelo movimento do planeta em sua órbita.  -->
+        <div class="shadowBlack translate" data-speed="0.25"></div>
+        <div class="container tranlate" data-speed="1.0">
+            <div class="contentBusca">
+                
                     <div class="buscar">
 
                         <div class="headerBusca">
                             
                             <br>
-                            <input type="text" name="busca" id="busca-endereco" placeholder="Ex: Av Paulista">
-                            <input type="text" name="busca" id="busca-estado" placeholder="Ex: sp">
+                            <input type="text" name="busca" id="busca-endereco" 
+                                placeholder="Digite um endereço, Ex: Avenida Paulista, Bela Vista">
+                            <input type="text" name="busca" id="busca-estado" placeholder="Digite um estado, Ex: SP">
                 
                             <button id="search" class="botao-adiciona botao-verde">
-                                 Search
+                                <img src="file:///home/aleolvfer/Downloads/busca.png"> Buscar
                             </button>
                         </div>
                     </div>
-                </p>
+                
             </div>
 
-            <div class="resContainer">
+            <div class="contentPor">
 
                 <p class="text">
                     <ul id="dados">
                     
                     </ul>
-                <img src="../../Downloads/sol.gif" alt="Gif do Por do sol">
-                  
+                   
+                </p>
+            </div>
+
+
+            <div class="contentNascer">
+
+                <p class="text">
+                    texto teste
+                    
+                    </ul>
                    
                 </p>
             </div>
@@ -76,5 +83,6 @@
 
     
     <script src="js/index.js"></script>
+    <script src="js/view/parallax.js"></script>
 </body>
 </html>
