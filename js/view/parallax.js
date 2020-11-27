@@ -11,7 +11,8 @@ window.addEventListener('scroll', () => {
 
     translate.forEach(element => {
         let speed = element.dataset.speed;
-        element.style.transform = `translateY(${scroll * speed}px)`;
+        console.log(speed)
+        element.style.transform = `translateY(${scroll * (speed + 9.0)}px)`;
     })
 
     bigTitle.style.opacity = - (scroll*2) / (header_height / 2) + 1;

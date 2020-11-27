@@ -12,6 +12,8 @@ html {
 
 body{
     font-family: 'Montserrat';
+    overflow-y: scroll;
+    scroll-behavior: initial;
 }
 
 .container {
@@ -174,15 +176,24 @@ section {
 }
 
 section .container {
-    display: grid;
-    /* grid-template-columns: repeat(3, 2fr); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-template-areas: 'myArea myArea';
-    height: 450px;
+    height: 350px;
 }
 
 section .contentPor{
-    color: white;
-    opacity: 20%;
+    color: #e73f35;
+    width: 40%;
+    text-align: center; 
+    border-radius: 32px;
+}
+
+section .contentPor ul {
+    list-style: none;
+    background-color:black;
+    margin: 2em;
 }
 
 section .container > *{
@@ -191,37 +202,47 @@ section .container > *{
 
 .contentBusca {
     color: white;
-    grid-area: myArea;
     text-align: center;
     z-index: 30;
 }
 
-.contentBusca h2 {
-    font-weight: 300;
+.headerBusca {
+    display: flex;
+
+    margin: 2em;
 }
 
-#busca-endereco, #busca-estado {
+
+#busca-endereco {
     color: #e73f35;
     width: 45%;
-    height: 2rem;
-    outline: 0;
     font-size: 1.2rem;
-    border-radius: 8px;
-}
-
-#busca-endereco:focus {
-    outline: 0;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+    border: 2px solid black;
 }
 
 #busca-estado {
     width: 20%;
+    border-right: 0;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#busca-endereco:focus, #busca-estado:focus {
+    outline: 0;
 }
 
 #search {
     background-image: linear-gradient(#a01f56, #e73f35);
     border: 2px solid black;
-    border-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
     padding: 0.3rem;
+}
+
+#search:focus {
+    outline: 0;
 }
 
 #search img {
@@ -236,6 +257,8 @@ section .container > *{
     z-index: 20;
     background: linear-gradient(to top, black, black, transparent);
 }
+
+
 
 @media (max-width: 420px) {
     .shadow {

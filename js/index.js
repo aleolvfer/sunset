@@ -46,7 +46,10 @@ const sunriseSunsetTime = (responseSunriseSunset) => {
 
 const liCreate = object => {
     const li = document.createElement("li");
-    li.textContent = object;
+    const p = document.createElement("p");
+    p.classList.add("text-monospace");
+    p.textContent = object;
+    li.appendChild(p);
     return li;
 }
 
