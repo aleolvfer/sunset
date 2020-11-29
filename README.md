@@ -17,7 +17,7 @@ O projeto faz o uso das seguintes APIs:
 <!--te-->
 
 <h4 align="center"> 
-	🚧  Under construction...  🚧
+	  Under construction...  🚧
 </h4>
 <hr>
 
