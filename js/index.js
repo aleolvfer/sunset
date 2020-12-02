@@ -25,9 +25,7 @@ const formatedTime = time => {
     let x;
     for(x in timezone){
         if(us.toUpperCase() === x){
-            console.log(time, '---');
         let arrayTime = time.split("");
-        console.log(arrayTime);
         arrayTime[0] = (parseInt(arrayTime[0]) - timezone[x]).toString();
         time = arrayTime.join('');
         }
@@ -49,7 +47,7 @@ const sunriseSunsetTime = (responseSunriseSunset) => {
 const liCreate = object => {
     const li = document.createElement("li");
     const p = document.createElement("p");
-    p.classList.add("text-monospace");
+    p.setAttribute("data-text", object);
     p.textContent = object;
     li.appendChild(p);
     return li;
@@ -71,18 +69,19 @@ const runApp = async function(event) {
             stateApp = addressArray.toString();
 
             const sunriseSunsetTimeObject = sunriseSunsetTime(await fetchSunriseSunsetTime(addressArray));
+            document.querySelector('#dados').appendChild(liCreate(sunriseSunsetTimeObject.sunset));
 
-            const arrayOfObj = Object.entries(sunriseSunsetTimeObject);
+            // const arrayOfObj = Object.entries(sunriseSunsetTimeObject);
         
-            const parametersArray = ['Nascer do Sol ', 'Por do Sol ', 
-            'Duração do Dia ', 'Primeira Luz do Dia ', 'Última Luz do dia '];
+            // const parametersArray = ['Nascer do Sol ', 'Por do Sol ', 
+            // 'Duração do Dia ', 'Primeira Luz do Dia ', 'Última Luz do dia '];
         
-            let cont = 0;
-            for(var [key, value] of arrayOfObj){
-                let li = parametersArray[cont] + value;
-                document.querySelector('#dados').appendChild(liCreate(li));
-                cont++;
-            }
+            // let cont = 0;
+            // for(var [key, value] of arrayOfObj){
+            //     let li = parametersArray[cont] + value;
+            //     document.querySelector('#dados').appendChild(liCreate(li));
+            //     cont++;
+            // }
         }
         
     }, 1000);

@@ -1,7 +1,7 @@
 const translate = document.querySelectorAll('.translate');
 const bigTitle = document.querySelector('.big-title');
 const description = document.querySelector(".description")
-const btnScroll = document.querySelector("header a");
+const btnScroll = document.querySelector("header .scrollDown");
 const header = document.querySelector("body");
 let header_height = header.offsetHeight;
 
