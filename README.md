@@ -12,15 +12,10 @@ O projeto faz o uso das seguintes APIs:
 
 <hr>
 
-<!--ts-->
-  Faça um teste na versao [Beta](https://aleolvfer.github.io/sunrise-sunset/)
-<!--te-->
+[Faça um teste](https://aleolvfer.github.io/sunset/)
 
 <h4 align="center"> 
 	  Under construction...  🚧
 </h4>
-<hr>
 
-<!--ts-->
- [Faça um teste](https://aleolvfer.github.io/sunrise-sunset/)
-<!--te-->
+
