@@ -67,10 +67,17 @@ const runApp = async function(event) {
         
         if(log != stateApp){
             stateApp = addressArray.toString();
+            console.log('Latitude e Longitude: ', stateApp);
+            const ul = document.querySelector("#dados");
+    
+            if(ul.children.length){
+                let li = ul.firstElementChild;
+                li.remove();
+            }
 
             const sunriseSunsetTimeObject = sunriseSunsetTime(await fetchSunriseSunsetTime(addressArray));
             document.querySelector('#dados').appendChild(liCreate(sunriseSunsetTimeObject.sunset));
-
+            
             // const arrayOfObj = Object.entries(sunriseSunsetTimeObject);
         
             // const parametersArray = ['Nascer do Sol ', 'Por do Sol ', 
