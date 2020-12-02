@@ -27,6 +27,16 @@ header {
     height: 100vh;
     position: relative;
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url(../img/solzao.jpeg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment:fixed ;
 }
 
 header:after{
@@ -80,11 +90,8 @@ nav .container {
     font-weight: 200;
 }
 
-.big-title span {
-    font-weight: 400;
-    font-size: 6rem;
-}
 
+/* -------- HAMBURGER MENU -------- */
 .hamburger-menu {
     width: 1.55rem;
     height: 1.5rem;
@@ -93,6 +100,7 @@ nav .container {
     align-items: center;
     justify-content: flex-end;
 }
+
 
 .bar {
     position: relative;
@@ -120,37 +128,41 @@ nav .container {
     transform: translateY(8px);
 }
 
+/* -------- ------- */
+
+.big-title span {
+    font-weight: 400;
+    font-size: 6rem;
+}
+
 .big-title {
-    position: absolute;
-    z-index: 30;
-    line-height:5rem;
-    top: calc(50% - 9rem);
-    left: calc(50% - 30rem);
-    width: 100%;
-    text-align: left;
-    padding: 2rem 2rem;
-    font-size: 4rem;
-    font-weight: 300;
-    color: white;
-    opacity: 80%;
+   
+    width: 60%;
+    margin: 0rem 0 14rem 2rem;
+
+    font-size: 8.7em;
+    font-weight: 800;
+
+
+    background: linear-gradient(30deg, #cd3632 0%, #200a19 45%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    letter-spacing: -3px;
+    line-height: 1em;
 }
 
 header p {
-    position: absolute;
     z-index: 30;
-    top: calc(50% - 2rem);
-    left: calc(50% - 43.7rem);
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    padding: 0;
+    width: 40%;
+    margin:20em 0 0 2em;
     font-size: 1.2rem;
     font-weight: 300;
     color: white;
-    opacity: 80%;
+    letter-spacing: .8em;
 }
 
-header a{
+/* header a{
     position: absolute;
     z-index: 30;
     top: calc(50% + 16rem);
@@ -167,6 +179,57 @@ header a{
     color: white;
 }
 
+header a :focus{
+    color: red;
+} */
+
+.scrollDown {
+    z-index: 30;
+    height: 30px;
+    width: 30px;
+    border:2px solid transparent;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.scrollDown::before,
+.scrollDown::after {
+    content: '';
+    position: absolute;
+    top:10%;
+    left: 50%;
+    border: 2px solid red;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    animation: scrollDown 1s ease-in-out infinite;
+}
+
+.scrollDown::after {
+    top:20%;
+    animation-delay: .3s;
+}
+
+@keyframes scrollDown{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top:90%;
+    }
+}
 
 section {
     width: 100%;
@@ -208,25 +271,29 @@ section .container > *{
 
 .headerBusca {
     display: flex;
-
     margin: 2em;
 }
 
 
 #busca-endereco {
+    background-color: #222;
     color: #e73f35;
-    width: 45%;
+    width: 65%;
     font-size: 1.2rem;
-    border-bottom-left-radius: 8px;
-    border-top-left-radius: 8px;
-    border: 2px solid black;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 2px solid #222;
+    border-right: 1px solid #333;
+    text-align: center;
 }
 
 #busca-estado {
+    background-color:#222;
+    color: #e73f35;
     width: 20%;
     border-right: 0;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border: 2px solid #222;
+    text-align: center;
 }
 
 #busca-endereco:focus, #busca-estado:focus {
@@ -236,13 +303,19 @@ section .container > *{
 #search {
     background-image: linear-gradient(#a01f56, #e73f35);
     border: 2px solid black;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     padding: 0.3rem;
+    cursor: pointer;
+    border:none
 }
 
 #search:focus {
-    outline: 0;
+   outline: 0;
+}
+
+#search:active {
+    background-image: linear-gradient(#eec555, #e73f35);
 }
 
 #search img {
@@ -257,7 +330,6 @@ section .container > *{
     z-index: 20;
     background: linear-gradient(to top, black, black, transparent);
 }
-
 
 
 @media (max-width: 420px) {

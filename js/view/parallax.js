@@ -3,7 +3,6 @@ const bigTitle = document.querySelector('.big-title');
 const description = document.querySelector(".description")
 const btnScroll = document.querySelector("header a");
 const header = document.querySelector("body");
-
 let header_height = header.offsetHeight;
 
 window.addEventListener('scroll', () => {
@@ -11,7 +10,6 @@ window.addEventListener('scroll', () => {
 
     translate.forEach(element => {
         let speed = element.dataset.speed;
-        console.log(speed)
         element.style.transform = `translateY(${scroll * (speed + 9.0)}px)`;
     })
 

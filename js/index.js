@@ -25,7 +25,9 @@ const formatedTime = time => {
     let x;
     for(x in timezone){
         if(us.toUpperCase() === x){
+            console.log(time, '---');
         let arrayTime = time.split("");
+        console.log(arrayTime);
         arrayTime[0] = (parseInt(arrayTime[0]) - timezone[x]).toString();
         time = arrayTime.join('');
         }
