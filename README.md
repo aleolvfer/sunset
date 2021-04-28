@@ -14,8 +14,4 @@ O projeto faz o uso das seguintes APIs:
 
 [Faça um teste](https://aleolvfer.github.io/sunset/)
 
-<h4 align="center"> 
-	  Under construction...  🚧
-</h4>
-
 
